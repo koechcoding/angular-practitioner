@@ -28,6 +28,7 @@
                         <th>Product</th>
                         <th>Code</th>
                         <th>Available</th>
+                        <th>Price</th>
                         <th>5 Star Rating</th>
                     </tr>
                 </thead>
@@ -41,9 +42,9 @@
                              />
                         </td>
                         <td>{{product.productName}}</td>
-                        <td>{{product.productCode}}</td>
+                        <td>{{product.productCode | lowercase}}</td>
                         <td>{{product.releaseDate}}</td>
-                        <td>{{product.price}}</td>
+                        <td>{{product.price | currency:'USD':''}}</td>
                         <td>{{product.starRating}}</td>
                     </tr>
                 </tbody>
