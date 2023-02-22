@@ -1,11 +1,14 @@
 import { Injectable } from "@angular/core";
 import { IProduct } from "./product";
+import { HttpClient } from "@angular/common/http";
 
 
 @Injectable({
     providedIn: 'root'
 })
 export class ProductService{
+
+    constructor(private http: HttpClient){}
   
     getProducts(): IProduct[] {
         return [
@@ -59,6 +62,7 @@ export class ProductService{
                 "starRating": 4.6,
                 "imageUrl": "assets/images/xbox-controller.png"
               }
+              
         ]
     }
 }
